@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MediPulse - Healthcare Data Analytics & Disease Prediction System</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            medical: {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              500: '#0284c7',
+              600: '#0369a1',
+              700: '#075985'
+            },
+            teal: {
+              500: '#0d9488',
+              600: '#0f766e',
+              700: '#115e59'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+
+  <!-- React 18 & ReactDOM 18 -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+
+  <!-- Babel Standalone for In-Browser JSX -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!-- Custom Medical Theme Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-slate-50 antialiased text-slate-900 min-h-screen">
+  <div id="root">
+    <!-- Initial Loading State -->
+    <div class="h-screen w-screen flex flex-col items-center justify-center bg-slate-50 space-y-3">
+      <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-sky-600 to-teal-500 flex items-center justify-center text-white shadow-lg animate-pulse">
+        <i class="fa-solid fa-notes-medical text-2xl"></i>
+      </div>
+      <div class="text-slate-800 font-bold text-base">MediPulse Analytics</div>
+      <div class="text-xs text-slate-400">Loading healthcare intelligence engine...</div>
+    </div>
+  </div>
+
+  <!-- API Client Service -->
+  <script src="js/services/api.js"></script>
+
+  <!-- React Components (JSX with Babel) -->
+  <script type="text/babel" src="js/components/Sidebar.jsx"></script>
+  <script type="text/babel" src="js/components/Navbar.jsx"></script>
+  <script type="text/babel" src="js/components/Dashboard.jsx"></script>
+  <script type="text/babel" src="js/components/PatientModal.jsx"></script>
+  <script type="text/babel" src="js/components/Patients.jsx"></script>
+  <script type="text/babel" src="js/components/Analytics.jsx"></script>
+  <script type="text/babel" src="js/components/Prediction.jsx"></script>
+  <script type="text/babel" src="js/components/Datasets.jsx"></script>
+  <script type="text/babel" src="js/components/MedicalReport.jsx"></script>
+  <script type="text/babel" src="js/app.jsx"></script>
+</body>
+</html>
